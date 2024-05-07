@@ -1,16 +1,16 @@
-import { Slot } from 'expo-router'
+import { Stack } from 'expo-router'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
-import '@/styles/global.css'
 import { StatusBar } from 'expo-status-bar'
 import {
-  useFonts,
   OpenSans_300Light,
   OpenSans_400Regular,
   OpenSans_500Medium,
   OpenSans_600SemiBold,
   OpenSans_700Bold,
+  useFonts,
 } from '@expo-google-fonts/open-sans'
-import { Loading } from '@/components/loading'
+import '@/styles/global.css'
+import Loading from '@/components/Loading'
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +26,9 @@ export default function Layout() {
   return (
     <GestureHandlerRootView className="flex-1">
       <StatusBar style="light" />
-      <Slot />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(drawer)" />
+      </Stack>
     </GestureHandlerRootView>
   )
 }

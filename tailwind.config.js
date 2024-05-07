@@ -1,6 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 import { colors } from './src/styles/colors'
 import { fontFamily } from './src/styles/fonts'
-/** @type {import('tailwindcss').Config} */
 
 module.exports = {
   // NOTE: Update this to include the paths to all of your component files.
