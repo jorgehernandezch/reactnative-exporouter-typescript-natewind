@@ -27,7 +27,8 @@ export default function Layout() {
     <GestureHandlerRootView className="flex-1">
       <StatusBar style="light" />
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(drawer)" />
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(tabs)" />
       </Stack>
     </GestureHandlerRootView>
   )

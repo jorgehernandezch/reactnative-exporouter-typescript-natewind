@@ -1,18 +1,19 @@
-import { ScrollView, Text, View, Button } from 'react-native'
-import { Link } from 'expo-router'
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
+import { useRouter } from 'expo-router'
 import { type DrawerContentComponentProps } from '@react-navigation/drawer'
 import DrawerMenu from './DrawerMenu'
 
 export default function DrawerContent(
   drawerProps: DrawerContentComponentProps,
 ) {
+  const router = useRouter()
   return (
     <View className="bg-primary flex-1 px-6 pt-24">
       <View className="my-4">
         <Text>Logo</Text>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View className="flex-1 gap-2">
+        <View className="flex-1 gap-2 mb-10">
           {drawerProps.state.routes.map((route, index) => {
             const isFocused = drawerProps.state.index === index
             const options = drawerProps.descriptors[route.key].options
@@ -34,6 +35,7 @@ export default function DrawerContent(
             return (
               <View key={index}>
                 <DrawerMenu
+                  key={index}
                   title={options.title}
                   onPress={onPress}
                   isFocused={isFocused}
@@ -42,9 +44,13 @@ export default function DrawerContent(
             )
           })}
         </View>
-        <Link href={'/'} asChild>
-          <Button title="Logout" />
-        </Link>
+        <TouchableOpacity
+          onPress={() => {
+            router.replace('../../')
+          }}
+        >
+          <Text>Sair</Text>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   )

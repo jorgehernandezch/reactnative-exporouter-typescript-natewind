@@ -7,18 +7,7 @@ export default function Layout() {
       screenOptions={{ headerShown: false }}
       drawerContent={(props) => <DrawerContent {...props} />}
     >
-      <Drawer.Screen
-        name="index"
-        options={{
-          title: 'Dashboard',
-        }}
-      />
-      <Drawer.Screen
-        name="profile"
-        options={{
-          title: 'Profile',
-        }}
-      />
+      <Drawer.Screen name="payments" options={{ title: 'Pagamentos' }} />
     </Drawer>
   )
 }

@@ -1,14 +1,13 @@
 import GuestScreen from '@/components/GuestScreen'
 import { Link } from 'expo-router'
-import { Button, View } from 'react-native'
+import { Text, View } from 'react-native'
 
-export default function Index() {
+export default function StackIndex() {
   return (
     <GuestScreen>
       <View>
-        <Link href={'/(drawer)'} asChild>
-          <Button title="Dashboard" />
-        </Link>
+        <Text>Index Stack</Text>
+        <Link href={'/(drawer)/(tabs)/home'}>Go Tabs</Link>
       </View>
     </GuestScreen>
   )

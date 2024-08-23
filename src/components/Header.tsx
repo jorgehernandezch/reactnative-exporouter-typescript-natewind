@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
-import { useNavigation } from 'expo-router'
+import { useNavigation, Link } from 'expo-router'
 import { DrawerActions } from '@react-navigation/native'
 import { colors } from '@/styles/colors'
 
@@ -22,7 +22,11 @@ export default function Header({ headerText }: HeaderProps) {
         onPress={toggleMenu}
       />
       <Text className="text-white">{headerText}</Text>
-      <View className="w-6"></View>
+      <View className="w-6">
+        <Link href="/">
+          <MaterialIcons name="logout" color={colors.white} size={24} />
+        </Link>
+      </View>
     </View>
   )
 }
