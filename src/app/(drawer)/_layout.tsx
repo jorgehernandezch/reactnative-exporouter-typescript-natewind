@@ -8,6 +8,7 @@ export default function Layout() {
       drawerContent={(props) => <DrawerContent {...props} />}
     >
       <Drawer.Screen name="payments" options={{ title: 'Pagamentos' }} />
+      <Drawer.Screen name="settings" options={{ title: 'Configurações' }} />
     </Drawer>
   )
 }

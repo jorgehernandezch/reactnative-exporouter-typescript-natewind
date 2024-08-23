@@ -28,7 +28,6 @@ export default function Layout() {
       <StatusBar style="light" />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" />
-        <Stack.Screen name="(tabs)" />
       </Stack>
     </GestureHandlerRootView>
   )

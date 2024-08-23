@@ -13,12 +13,30 @@ export default function DrawerContent(
         <Text>Logo</Text>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
+        <View className="flex-1 gap-2 mb-2">
+          <TouchableOpacity
+            className={`w-full rounded-md p-4 bg-blue-800`}
+            onPress={() => {
+              router.push('/(drawer)/(tabs)/home')
+            }}
+          >
+            <Text className="text-white">Home</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            className={`w-full rounded-md p-4 bg-blue-800`}
+            onPress={() => {
+              router.push('/(drawer)/(tabs)/notifications')
+            }}
+          >
+            <Text>Notifications</Text>
+          </TouchableOpacity>
+        </View>
         <View className="flex-1 gap-2 mb-10">
           {drawerProps.state.routes.map((route, index) => {
             const isFocused = drawerProps.state.index === index
             const options = drawerProps.descriptors[route.key].options
 
-            if (options.title === undefined) return <></>
+            if (options.title === undefined) return <View key={index}></View>
 
             const onPress = () => {
               const event = drawerProps.navigation.emit({
@@ -46,7 +64,7 @@ export default function DrawerContent(
         </View>
         <TouchableOpacity
           onPress={() => {
-            router.replace('../../')
+            router.replace('/')
           }}
         >
           <Text>Sair</Text>

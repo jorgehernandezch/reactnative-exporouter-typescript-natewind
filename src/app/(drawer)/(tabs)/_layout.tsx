@@ -4,7 +4,8 @@ export default function TabsLayout() {
   return (
     <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen name="home" />
-      <Tabs.Screen name="calculator" />
+      <Tabs.Screen name="profile" />
+      <Tabs.Screen name="notifications" />
     </Tabs>
   )
 }

@@ -15,7 +15,7 @@ export default function DrawerMenu({
 }: DrawerMenuProps) {
   return (
     <Pressable
-      className={`w-full  rounded-md p-4 ${isFocused ? 'bg-cyan-300' : ''}`}
+      className={`w-full  rounded-md p-4 ${isFocused ? 'bg-cyan-300' : 'bg-blue-800'}`}
       {...rest}
     >
       <Text className={`${isFocused ? 'text-primary' : 'text-white'}`}>

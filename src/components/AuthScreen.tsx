@@ -9,7 +9,7 @@ interface AuthPageProps {
 export default function AuthScreen({ children }: AuthPageProps) {
   return (
     <View
-      className="bg-gray-400 flex-1"
+      className="bg-blue-900 flex-1"
       style={{ paddingTop: 10 + Constants.statusBarHeight }}
     >
       <Header headerText="Dashboard" />
