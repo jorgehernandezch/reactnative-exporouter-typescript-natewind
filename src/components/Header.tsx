@@ -2,7 +2,7 @@ import { Text, View } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 import { useNavigation, Link } from 'expo-router'
 import { DrawerActions } from '@react-navigation/native'
-import { colors } from '@/styles/colors'
+import { colors } from '@/constants/colors'
 
 interface HeaderProps {
   headerText: string
