@@ -11,7 +11,18 @@ npx expo install expo@latest
 
 This ensures you are using the latest stable version of Expo.
 
-## 2. Update Dependencies
+## 2. Update `expo-router`
+To avoid conflicts with previous versions of `expo-router`, uninstall existing versions and reinstall the compatible version:
+
+```bash
+npm uninstall expo-router @react-navigation/native @react-navigation/drawer
+npx expo install expo-router
+npx expo install @react-navigation/drawer react-native-gesture-handler react-native-reanimated
+```
+
+This will install the correct version of `expo-router` along with its required dependencies.
+
+## 3. Update Dependencies
 After updating the SDK, update all dependencies to avoid conflicts:
 
 ```bash
@@ -19,16 +30,6 @@ npx expo install --fix
 ```
 
 This command will automatically correct the required dependency versions.
-
-## 3. Update `expo-router`
-To avoid conflicts with previous versions of `expo-router`, uninstall existing versions and reinstall the compatible version:
-
-```bash
-npm uninstall expo-router @react-navigation/native @react-navigation/drawer
-npx expo install expo-router
-```
-
-This will install the correct version of `expo-router` along with its required dependencies.
 
 ## 4. Configure `app.json` or `app.config.js`
 Ensure that your `app.json` or `app.config.js` file has the proper configuration for the entry point:
