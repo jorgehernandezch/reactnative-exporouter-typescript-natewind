@@ -31,7 +31,16 @@ npx expo install --fix
 
 This command will automatically correct the required dependency versions.
 
-## 4. Configure `app.json` or `app.config.js`
+## 4. Install `expo-router Drawer (If Necessary)`
+Install the compatible version of Expor Router Drawer:
+
+```bash
+npx expo install @react-navigation/drawer react-native-gesture-handler react-native-reanimated
+```
+
+This will install the correct version of `@react-navigation/drawer` along with its required dependencies.
+
+## 5. Configure `app.json` or `app.config.js`
 Ensure that your `app.json` or `app.config.js` file has the proper configuration for the entry point:
 
 ```json
@@ -60,7 +69,7 @@ export default {
 
 This enables the New Architecture and sets the correct entry point.
 
-## 5. Verify Watchman Installation
+## 6. Verify Watchman Installation
 If you see warnings related to Watchman, run the following commands:
 
 ```bash
