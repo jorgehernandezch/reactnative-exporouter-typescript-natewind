@@ -17,7 +17,6 @@ To avoid conflicts with previous versions of `expo-router`, uninstall existing v
 ```bash
 npm uninstall expo-router @react-navigation/native @react-navigation/drawer
 npx expo install expo-router
-npx expo install @react-navigation/drawer react-native-gesture-handler react-native-reanimated
 ```
 
 This will install the correct version of `expo-router` along with its required dependencies.
