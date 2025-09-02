@@ -73,8 +73,6 @@ package.json          – Dependencies & scripts
 
 MIT License © 2025
 
-````
-
 ---
 
 ###  Español
@@ -147,8 +145,6 @@ package.json          – Dependencias y scripts
 ## Licencia
 
 Licencia MIT © 2025
-
-````
 
 ---
 
