@@ -1,95 +1,226 @@
-# Updating Expo Router for SDK 52 and New Architecture
+# 🧩 React Native Expo Router + TypeScript + NativeWind
 
-This document outlines the steps to update `expo-router` to the version compatible with Expo SDK 52 and enable the New Architecture in your project.
+---
 
-## 1. Update Expo SDK
-Run the following command to install the latest version of the `expo` package:
+### English
 
-```bash
-npx expo install expo@latest
-```
+````markdown
+# 🧩 React Native Expo Router + TypeScript + NativeWind
 
-This ensures you are using the latest stable version of Expo.
+This repository demonstrates a simple and modern React Native setup using:
 
-## 2. Update `expo-router`
-To avoid conflicts with previous versions of `expo-router`, uninstall existing versions and reinstall the compatible version:
+-  **Expo Router** (file-based routing)
+-  **TypeScript**
+-  **NativeWind** (Tailwind CSS for React Native)
 
-```bash
-npm uninstall expo-router @react-navigation/native @react-navigation/drawer
-npx expo install expo-router
-```
+---
 
-This will install the correct version of `expo-router` along with its required dependencies.
+##  Features
 
-## 3. Update Dependencies
-After updating the SDK, update all dependencies to avoid conflicts:
+| Icon | Description |
+|------|-------------|
+|  | File-based routing with **Expo Router** |
+|  | Full **TypeScript** support |
+|  | Tailwind-style styling using **NativeWind** |
+|  | Compatible with **Expo** for a streamlined workflow |
 
-```bash
-npx expo install --fix
-```
+---
 
-This command will automatically correct the required dependency versions.
-
-## 4. Install `expo-router Drawer (If Necessary)`
-Install the compatible version of Expor Router Drawer:
+##  Installation
 
 ```bash
-npx expo install @react-navigation/drawer react-native-gesture-handler react-native-reanimated
-```
+npm install
+````
 
-This will install the correct version of `@react-navigation/drawer` along with its required dependencies.
-
-## 5. Configure `app.json` or `app.config.js`
-Ensure that your `app.json` or `app.config.js` file has the proper configuration for the entry point:
-
-```json
-{
-  "expo": {
-    "main": "expo-router/entry",
-    "experiments": {
-      "newArchEnabled": true
-    }
-  }
-}
-```
-
-If you are using `app.config.js`, add it as follows:
-
-```js
-export default {
-  expo: {
-    main: "expo-router/entry",
-    experiments: {
-      newArchEnabled: true
-    }
-  }
-};
-```
-
-This enables the New Architecture and sets the correct entry point.
-
-## 6. Verify Watchman Installation
-If you see warnings related to Watchman, run the following commands:
+### Start development
 
 ```bash
-watchman watch-del '/path/to/your/project'
-watchman watch-project '/path/to/your/project'
+npm run start
 ```
 
-To clear the Metro cache and restart Expo, run:
+Scan the QR code using the **Expo Go** app to view the app on your device.
 
-```bash
-expo start -c
+---
+
+## Project Structure
+
 ```
+/app
+  ├── _layout.tsx      – Root layout and navigation config
+  ├── index.tsx        – Home screen
+  └── ...              – Other screens via file-based routing
 
-If the issue persists, reinstall Watchman:
-
-```bash
-brew uninstall watchman
-brew install watchman
+global.css             – Tailwind CSS directives
+tailwind.config.js    – Content paths & NativeWind preset
+babel.config.js       – Babel config with nativewind plugin
+metro.config.js       – Metro config for NativeWind
+nativewind-env.d.ts   – TypeScript types for NativeWind
+tsconfig.json         – TypeScript configuration
+package.json          – Dependencies & scripts
 ```
 
 ---
 
-With these steps, your project will be updated and ready to work with the latest version of Expo and `expo-router`. 🚀
+## Usage
 
+* Create screens by adding `.tsx` files under the `app/` directory.
+* Use `<View className="...">` and Tailwind-style classes supported by NativeWind.
+* Import global styles via `global.css`.
+
+---
+
+## License
+
+MIT License © 2025
+
+````
+
+---
+
+###  Español
+
+```markdown
+# 🧩 React Native Expo Router + TypeScript + NativeWind
+
+Este repositorio muestra una configuración moderna y sencilla de React Native usando:
+
+-  **Expo Router** (navegación basada en archivos)
+-  **TypeScript**
+-  **NativeWind** (Tailwind CSS para React Native)
+
+---
+
+##  Características
+
+| Icono | Descripción |
+|-------|-------------|
+|  | Enrutamiento basado en archivos con **Expo Router** |
+|  | Soporte completo para **TypeScript** |
+|  | Estilos tipo Tailwind con **NativeWind** |
+|  | Compatible con **Expo** para un flujo de desarrollo ágil |
+
+---
+
+##  Instalación
+
+```bash
+npm install
+````
+
+### Iniciar desarrollo
+
+```bash
+npm run start
+```
+
+Escanea el código QR con la app **Expo Go** para ver la app en tu dispositivo.
+
+---
+
+## Estructura del proyecto
+
+```
+/app
+  ├── _layout.tsx      – Layout raíz y configuración de navegación
+  ├── index.tsx        – Pantalla de inicio
+  └── ...              – Otras pantallas mediante enrutamiento por archivos
+
+global.css             – Directivas de Tailwind CSS
+tailwind.config.js    – Rutas de contenido y preset de NativeWind
+babel.config.js       – Configuración de Babel con plugin de NativeWind
+metro.config.js       – Configuración de Metro para NativeWind
+nativewind-env.d.ts   – Tipos TypeScript para NativeWind
+tsconfig.json         – Configuración de TypeScript
+package.json          – Dependencias y scripts
+```
+
+---
+
+## Uso
+
+* Crea pantallas agregando archivos `.tsx` en la carpeta `app/`.
+* Utiliza `<View className="...">` y clases estilo Tailwind soportadas por NativeWind.
+* Importa estilos globales desde `global.css`.
+
+---
+
+## Licencia
+
+Licencia MIT © 2025
+
+````
+
+---
+
+###  Português
+
+```markdown
+# 🧩 React Native Expo Router + TypeScript + NativeWind
+
+Este repositório demonstra uma configuração moderna e simples de React Native usando:
+
+-  **Expo Router** (navegação baseada em arquivos)
+-  **TypeScript**
+-  **NativeWind** (Tailwind CSS para React Native)
+
+---
+
+##  Funcionalidades
+
+| Ícone | Descrição |
+|-------|-----------|
+|  | Roteamento baseado em arquivos com **Expo Router** |
+|  | Suporte completo a **TypeScript** |
+|  | Estilização no estilo Tailwind com **NativeWind** |
+|  | Compatível com **Expo** para um fluxo de desenvolvimento ágil |
+
+---
+
+##  Instalação
+
+```bash
+npm install
+````
+
+### Iniciar desenvolvimento
+
+```bash
+npm run start
+```
+
+Escaneie o código QR com o aplicativo **Expo Go** para ver o app no seu dispositivo.
+
+---
+
+## Estrutura do projeto
+
+```
+/app
+  ├── _layout.tsx      – Layout raiz e configuração de navegação
+  ├── index.tsx        – Tela inicial
+  └── ...              – Outras telas via roteamento baseado em arquivos
+
+global.css             – Diretivas do Tailwind CSS
+tailwind.config.js    – Caminhos de conteúdo e preset do NativeWind
+babel.config.js       – Configuração do Babel com plugin NativeWind
+metro.config.js       – Configuração do Metro para NativeWind
+nativewind-env.d.ts   – Tipos TypeScript para NativeWind
+tsconfig.json         – Configuração do TypeScript
+package.json          – Dependências e scripts
+```
+
+---
+
+## Uso
+
+* Crie telas adicionando arquivos `.tsx` na pasta `app/`.
+* Use `<View className="...">` e classes no estilo Tailwind suportadas pelo NativeWind.
+* Importe estilos globais via `global.css`.
+
+---
+
+## Licença
+
+Licença MIT © 2025
+
+```
