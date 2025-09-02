@@ -219,4 +219,3 @@ package.json          – Dependências e scripts
 
 Licença MIT © 2025
 
-```
